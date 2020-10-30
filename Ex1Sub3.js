@@ -1,13 +1,9 @@
-const word = 'Привет'
-
-let result;
-
-for (let i = 1; i <= word.length; i++){
-  result = i;
+let word = 'Привет'
+let newWord = "";
+function reverseWord(word) {
+  for (let i = word.length - 1; i >= 0; i--) {
+    newWord += word[i];
+  }
+  return(newWord);
 }
-
-let sign = result;
-
-for (let i = sign - 1; i >= 0; i--){
-  console.log(word[i]);
-}
+reverseWord(word)
