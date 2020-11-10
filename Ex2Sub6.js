@@ -1,13 +1,16 @@
-array = [1, 2, 3, 4, 5];
 
-const newArr = array.map(function(elem,index){
-    return [elem, Math.random()];
+function shuffle (arr){
+    const newArr = arr.map(function(elem,index){
+        return [elem, Math.random()];
+        })
+    .sort(function(a,b){
+        return a[1] - b[1];
     })
-.sort(function(a,b){
-    return a[1] - b[1];
-})
-.map(function(elem){
+    .map(function(elem){
     return elem[0];
-});
+    });
+    return newArr;
+}
 
-console.log(newArr);
+array = [1, 2, 3, 4, 5];
+console.log(shuffle(array));

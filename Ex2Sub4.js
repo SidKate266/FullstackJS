@@ -1,5 +1,5 @@
 function sortDesc(arr){
-    newArr = [];
+    var newArr = [];
     newArr = arr.sort(function(a, b) {
         return b - a;
       })
